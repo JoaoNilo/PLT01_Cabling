@@ -2,7 +2,7 @@ connectors:
   J21:
     type: Dupont Plastic Plug
     subtype: (shell)
-    manufacturer: Yuanbiming
+    manufacturer: Jowle Technology
     pn:  1x3P
     supplier: AliExpress
     image: 
