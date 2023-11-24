@@ -1,0 +1,60 @@
+connectors:
+  P1: &jst_xhp_6
+    type: Plastic Plug
+    subtype: (housing)
+    manufacturer: JST
+    pn:  XHP-6
+    supplier: AliExpress
+    image: 
+      src: "/home/nilo/Documents/Projects/KiCad/PLT-02/Cabling/Images/XHP-6.jpg"
+      width: 64
+      height: 64
+      #bgcolor: GY
+    pinlabels: [STATE,RX,TX,GND,VCC,EN]
+    additional_components:
+      - 
+        type: Contacts
+        #subtype: stainned
+        manufacturer: JST
+        pn: SXH-001T-P0.6N
+        supplier: AliExpress
+        qty: 6
+      -
+        type: Shrink Tube
+        subtype: 1mm x 15mm
+        qty: 6
+        supplier: AliExpress
+      -
+        type: Shrink Tube
+        subtype: 4mm x 20mm
+        qty: 1
+        manufacturer: DNI
+        pn: DNI5104
+        supplier: Leroy Merlin
+      -
+        type: Shrink Tube
+        subtype: 10mm x 12mm
+        qty: 1
+        manufacturer: DNI
+        pn: DNI5110
+        supplier: Leroy Merlin
+
+  P2:
+    <<: *jst_xhp_6
+  
+cables:
+  W1:
+    category: bundle
+    colors: [WH,YE,GN,BK,RD,BU]
+    #wirecount: 6
+    gauge: 0.3 mm²
+    length: 0.45
+    type: Silicon single 22 AWG
+    manufacturer: [CBAZY,CBAZY,CBAZY,CBAZY,CBAZY,CBAZY]
+    supplier: [Ali,Ali,Ali,Ali,Ali,Ali]
+
+connections:
+  -
+    - P1: [1-6]
+    - W1: [1-6]  
+    - P2: [1-6]

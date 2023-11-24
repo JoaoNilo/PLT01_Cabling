@@ -1,0 +1,58 @@
+connectors:
+  P13:
+    type: Plastic Plug
+    subtype: (housing)
+    manufacturer: JST
+    pn:  XHP-3
+    image: 
+      src: "/home/nilo/Documents/Projects/KiCad/PLT-02/Cabling/Images/XHP-3.jpg"
+      width: 64
+      height: 64
+      #bgcolor: GY
+    pinlabels: [BAT+, NC, BAT-]
+    additional_components:
+      - 
+        type: Contacts
+        #subtype: stainned
+        manufacturer: JST
+        pn: SXH-001T-P0.6N
+        qty: 3
+  T1:
+    style: simple
+    type: Crimp ferrule
+    subtype: 1.0 mm²
+    manufacturer: WELIBA
+    color: RD
+    image: 
+      src: "/home/nilo/Documents/Projects/KiCad/PLT-02/Cabling/Images/ferrule_1mm_red.png"
+      width: 64
+      height: 64
+    #show_name: false
+  T2:
+    style: simple
+    type: Crimp ferrule
+    subtype: 1.5 mm²
+    manufacturer: WELIBA
+    color: BK
+    image: 
+      src: "/home/nilo/Documents/Projects/KiCad/PLT-02/Cabling/Images/ferrule_1p5mm_black.png"
+      width: 64
+      height: 64
+    #show_name: false
+cables:
+  W1:
+    category: bundle
+    colors: [RD, BK]
+    #wirecount: 2
+    gauge: 0.5 mm²
+    length: 0.85
+    type: PVC single 20 AWG
+    manufacturer: [ALLCAB,ALLCAB]
+    supplier: [Bau,Bau]
+    spn: [3527,3526]
+
+connections:
+  -
+    - P13: [1,3]
+    - W1: [1,2]  
+    - [T1, T2] 
